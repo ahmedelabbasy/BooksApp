@@ -42,38 +42,87 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+# MyApp
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+MyApp is a React Native application that allows users to browse a list of books, view book details, and add books to their favorites. The app fetches data from the Google Books API and implements performance optimizations including lazy loading for book images.
 
-## Step 3: Modifying your App
+## Features
 
-Now that you have successfully run the app, let's modify it.
+- Browse a list of books
+- Search books by title or author
+- View detailed information about a book
+- Add or remove books from favorites
+- Smooth navigation and fast rendering of book lists
+- Performance optimizations including lazy loading for book images
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Installation
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/myApp.git
 
-## Congratulations! :tada:
+## Project Structure
 
-You've successfully run and modified your React Native App. :partying_face:
+   ```sh
+   myApp/
+   ├── android/
+   ├── ios/
+   ├── src/
+   │   ├── api/
+   │   │   └── books.ts
+   │   ├── assets/
+   │   │   ├── images/
+   │   │   │   └── book-placeholder.png
+   │   │   └── index.tsx
+   │   ├── components/
+   │   │   └── BookItem.tsx
+   │   ├── routes/
+   │   │   └── routes.tsx
+   │   │   └── homeStack.tsx
+   │   ├── screens/
+   │   │   ├── HomeScreen/
+   │   │   │   └── index.tsx
+   │   │   ├── BookDetailsScreen/
+   │   │   │   └── index.tsx
+   │   │   └── FavoritesScreen/
+   │   │       └── index.tsx
+   │   ├── store/
+   │   │   └── store.tsx
+   │   └── App.tsx
+   ├── __tests__/
+   │   ├── App.test.tsx
+   │   ├── BookItem.test.tsx
+   │   └── HomeScreen.test.tsx
+   ├── __mocks__/
+   │   ├── server.ts
+   │   ├── handlers.ts
+   │   └── setupTests.ts
+   ├── .babelrc
+   ├── package.json
+   ├── index.tsx
+   ├── tsconfig.json
+   ├── jest.config.js
+   ├── jest.setup.js
+   ├── babel.config.js
+   └── README.md
 
-### Now what?
+## API
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+   ```sh
+   The app fetches book data from the Google Books API. The API interaction is managed in the src/api/books.ts file.
 
-# Troubleshooting
+## Performance Optimizations
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+   ```sh
+   Lazy Loading: Book images are loaded lazily to improve performance.
+   FlatList: Used for rendering the list of books to ensure smooth scrolling and performance.
 
-# Learn More
+## Acknowledgements
 
-To learn more about React Native, take a look at the following resources:
+   React Native
+   Google Books API
+   React Query
+   MSW (Mock Service Worker)
+   Jest
+   React Native Testing Library
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
